@@ -52,11 +52,13 @@ class FacebookController extends BaseController {
 			$relationships = array('In a relationship', 'Engaged', 'Married');
 			if(in_array($me['relationship_status'], $relationships))
 				$user->in_relation = true;
+
+			$user->email = $me['email'];
+			$user->birthday = strftime("%Y-%m-%d",strtotime($me['birthday']));
 		}
 
 		// Update user
 		$user->name = $me['first_name'] . ' ' . $me['last_name'];
-		$user->email = $me['email'];
 
 		if($user->organisation == null)
 		{
@@ -77,8 +79,8 @@ class FacebookController extends BaseController {
 
 		$user->save();
 		Auth::login($user);
-
-		return Redirect::to('/')->with('message', 'Logged in with Facebook');
+dd($user);
+		#return Redirect::to('/')->with('message', 'Logged in with Facebook');
 	}
 
 }

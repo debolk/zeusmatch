@@ -1,8 +1,8 @@
-<img src="images/dummy.png" alt="Foto van {persoon}" class="photo">
+<img src="https://graph.facebook.com/<?= urlencode($user['facebook_id']) ?>/picture?width=600" alt="Foto van <?= htmlentities($user['name']) ?>" class="photo">
 <p class="details">
-   <span class="name">Max Maton</span> 
-   <span class="age">22 jaar</span>
-   <span class="organisation">De Bolk (Delft)</span>
+<span class="name"><?= $user['name'] ?></span> 
+<span class="age"><?= $age->format('%y') ?> jaar</span>
+   <span class="organisation"><?= $user['organisation'] ?></span>
 </p>
 <form class="ui-grid-a">
     <div class="ui-block-a">

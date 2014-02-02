@@ -66,6 +66,11 @@ Class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function likes()
 	{
 		return $this->hasMany('Like');
-	}
+    }
+
+    public static function random()
+    {
+        return User::orderBy(DB::raw('RAND()'));
+    }
 
 }

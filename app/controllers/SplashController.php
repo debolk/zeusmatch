@@ -12,6 +12,9 @@ class SplashController extends BaseController
      */
     public function index()
     {
+	if (Auth::check()) {
+		return Redirect::action('MatchController@index');
+	}
         $this->layout->content = View::make('splash/index');
     }
 }

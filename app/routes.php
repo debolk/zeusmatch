@@ -3,6 +3,7 @@
 // Facebook authentication
 Route::get('/login', 'FacebookController@redirectLogin');
 Route::get('/login/callback', 'FacebookController@processLogin');
+Route::get('/logout', 'FacebookController@processLogout');
 
 // Main UI
 Route::get('/', 'SplashController@index');

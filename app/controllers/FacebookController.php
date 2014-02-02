@@ -12,6 +12,12 @@ class FacebookController extends BaseController {
 		return Redirect::to($facebook->getLoginUrl($params));
 	}
 
+	public function processLogout()
+	{
+		Auth::logout();
+		return Redirect::to('/');
+	}
+
 	public function processLogin()
 	{
 		$code = Input::get('code');

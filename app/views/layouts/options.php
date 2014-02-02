@@ -14,7 +14,7 @@
 
         <div data-role="page">
             <div data-role="header" data-position="fixed">
-                <a href="#" data-icon="carat-l" class="ui-btn-left">Terug</a>
+                <a href="/match" data-icon="carat-l" class="ui-btn-left">Terug</a>
                 <h1>ZeusMatch</h1>
             </div>
             <div role="main" class="ui-content">
@@ -23,9 +23,9 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" data-icon="gear" <?php echo Request::is('settings') ? 'class="ui-btn-active"': null; ?>>Instellingen</a></li>
-                        <li><a href="#" data-icon="power" <?php echo Request::is('privacy') ? 'class="ui-btn-active"': null; ?>>Privacy</a></li>
-                        <li><a href="#" data-icon="mail" <?php echo Request::is('contact') ? 'class="ui-btn-active"': null; ?>>Contact</a></li>
+                        <li><a href="/settings" data-icon="gear" <?php echo Request::is('settings') ? 'class="ui-btn-active"': null; ?>>Instellingen</a></li>
+                        <li><a href="/privacy" data-icon="power" <?php echo Request::is('privacy') ? 'class="ui-btn-active"': null; ?>>Privacy</a></li>
+                        <li><a href="/contact" data-icon="mail" <?php echo Request::is('contact') ? 'class="ui-btn-active"': null; ?>>Contact</a></li>
                     </ul>
                 </div>
             </div>

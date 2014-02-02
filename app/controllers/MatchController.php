@@ -2,13 +2,8 @@
 
 class MatchController extends BaseController
 {
-    public function __construct()
-    {
-        $this->layout = View::make('layouts/match');
-    }
-
     /**
-     * Shows the match page
+     * Shows the main matching page
      */
     public function index()
     {

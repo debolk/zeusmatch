@@ -15,14 +15,3 @@
         <div data-role="page">
             <div data-role="header">
                 <h1>ZeusMatch</h1>
-                <a href="/settings" class="ui-btn-right" data-icon="gear">Opties</a>
-            </div>
-            <div role="main" class="ui-content">
-                <?php echo $content; ?>
-            </div>
-        </div>
-
-        <script type="text/javascript" src="/javascripts/jquery-2.1.0.min.js"></script>        
-        <script type="text/javascript" src="/javascripts/jquery.mobile-1.4.0.min.js"></script>        
-    </body>
-</html>

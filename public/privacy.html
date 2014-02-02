@@ -13,7 +13,8 @@
     <body>
 
         <div data-role="page">
-            <div data-role="header">
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="carat-l" class="ui-btn-left">Terug</a>
                 <h1>ZeusMatch</h1>
             </div>
             <div role="main" class="ui-content">
@@ -52,8 +53,14 @@
                     Laatste wijziging: 2 februari 2014.
                 </p>
             </div>
-            <div data-role="footer">
-                <h4>&copy; Max Maton, Jakob Buis 2014</h4>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="gear">Instellingen</a></li>
+                        <li><a href="#" data-icon="power" class="ui-btn-active">Privacy</a></li>
+                        <li><a href="#" data-icon="mail">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 

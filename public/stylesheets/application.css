@@ -1,0 +1,12 @@
+.logo, .photo {
+    width: 90%;
+    margin: 5%;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.details .name {
+    font-weight: bold;
+}

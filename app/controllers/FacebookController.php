@@ -71,7 +71,8 @@ class FacebookController extends BaseController {
 
 		$user->save();
 		Auth::login($user);
-		dd($me);
+
+		return Redirect::to('/')->with('message', 'Logged in with Facebook');
 	}
 
 }

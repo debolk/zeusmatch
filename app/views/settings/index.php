@@ -61,9 +61,9 @@
 <p>
     Als je wilt, kun je hier uitloggen van de app. Dit heeft geen effect op de data die wordt bewaard. Je blijft ingelogd op Facebook. Normaal gesproken heb je deze optie niet nodig.
 </p>
-<p>
-    <input data-icon="power" value="Uitloggen van ZeusMatch" type="button" data-theme="c" id="logout">
-</p>
+<form action="/logout" method="GET" data-ajax="false">
+    <input data-icon="power" value="Uitloggen van ZeusMatch" type="button" data-theme="c">
+</form>
 <h2>Profiel verwijderen</h2>
 <p>
     Weet je zeker dat je je profiel wilt verwijderen? Alle data (je foto's, likes, matches) wordt onmiddelijk verwijderd en kan niet meer worden teruggehaald. Je kan deze stap niet ongedaan maken.

@@ -8,25 +8,32 @@
         <link rel="stylesheet" href="/stylesheets/zeusmatch.css" />
         <link rel="stylesheet" href="/stylesheets/jquery.mobile.icons-1.4.0.min.css" />
         <link rel="stylesheet" href="/stylesheets/jquery.mobile.structure-1.4.0.min.css" />
-        <link rel="stylesheet" href="/stylesheets/zeusmatch.css" />
+        <link rel="stylesheet" href="/stylesheets/application.css" />
     </head>
     <body>
 
         <div data-role="page">
-            <div data-role="header">
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="carat-l" class="ui-btn-left">Terug</a>
                 <h1>ZeusMatch</h1>
             </div>
             <div role="main" class="ui-content">
-                <h1>Profiel verwijderen</h1>
+                <h1>Contact</h1>
                 <p>
-                    Weet je zeker dat je je profiel wilt verwijderen? Alle data (je foto's, likes, matches) wordt onmiddelijk verwijderd en kan niet meer worden teruggehaald. Je kan deze stap niet ongedaan maken.
+                    Vragen? <a href="mailto:zeusmatch@debolk.nl">zeusmatch@debolk.nl</a>
                 </p>
                 <p>
-                    <input data-icon="delete" value="Ja, verwijder mijn profiel" type="button" data-theme="b">
+                    ZeusMatch is een product van <a href="https://www.facebook.com/max.maton">Max Maton</a> en <a href="https://www.facebook.com/jakobbuis">Jakob Buis</a>.
                 </p>
             </div>
-            <div data-role="footer">
-                <h4>&copy; Max Maton, Jakob Buis 2014</h4>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="gear">Instellingen</a></li>
+                        <li><a href="#" data-icon="power">Privacy</a></li>
+                        <li><a href="#" data-icon="mail" class="ui-btn-active">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 

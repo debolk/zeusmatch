@@ -7,6 +7,9 @@ class SettingsController extends OptionsController
      */
     public function index()
     {
+        if(!Auth::check())
+            return Redirect::action('SplashController@index');
+
         $this->layout->content = View::make('settings/index');
     }
 }

@@ -12,6 +12,9 @@ class MatchController extends BaseController
      */
     public function index()
     {
+        if(!Auth::check())
+            return Redirect::action('SplashController@index');
+
         $this->layout->content = View::make('match/index');
     }
 }

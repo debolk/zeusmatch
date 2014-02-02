@@ -15,7 +15,7 @@
         <div data-role="page">
             <div data-role="header">
                 <h1>ZeusMatch</h1>
-                <a href="#" class="ui-btn-right" data-icon="gear">Opties</a>
+                <a href="/settings" class="ui-btn-right" data-icon="gear">Opties</a>
             </div>
             <div role="main" class="ui-content">
                 <?php echo $content; ?>

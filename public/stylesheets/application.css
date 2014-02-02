@@ -1,6 +1,8 @@
 .logo, .photo {
     width: 90%;
-    margin: 5%;
+    max-width: 600px;
+    display: block;
+    margin: 5% auto 5% auto;
 }
 
 .navbar {

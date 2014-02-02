@@ -7,7 +7,7 @@ class FacebookController extends BaseController {
 		$facebook = new Facebook(Config::get('facebook'));
 		$params = array(
 			'redirect_uri' => url('/login/callback'),
-			'scope' => 'email,user_location,user_relationships,user_about_me,user_birthday,user_games_activity',
+			'scope' => 'email,user_location,user_relationships,user_about_me,user_birthday',
 		);
 		return Redirect::to($facebook->getLoginUrl($params));
 	}
@@ -29,15 +29,49 @@ class FacebookController extends BaseController {
 		{
 			$user = new User();
 			$user->facebook_id = $uid;
+
+			if($me['gender'] == 'male')
+			{
+				$user->gender = 'M';
+				$user->gender_wanted_male = false;
+				$user->gender_wanted_female = true;
+			}
+			if($me['gender'] == 'female')
+			{
+				$user->gender = 'F';
+				$user->gender_wanted_male = true;
+				$user->gender_wanted_female = false;
+			}
+
+			$relationships = array('In a relationship', 'Engaged', 'Married');
+			if(in_array($me['relationship_status'], $relationships))
+				$user->in_relation = true;
 		}
 
 		// Update user
 		$user->name = $me['first_name'] . ' ' . $me['last_name'];
 		$user->email = $me['email'];
 
+		if($user->organisation == null)
+		{
+			$town = $me['location']['name'];
+			$translation = array(
+				'Delft' => 'Bolk',
+				'Amsterdam' => 'Liber',
+				'Nijmegen' => 'Karpe',
+				'Utrecht' => 'Biton',
+				'Groningen' => 'Cleopatra',
+				'Leiden' => 'Catena',
+				'Leeuwarden' => 'Wolweze',
+			);
+			$user->organisation = $translation[$town];
+		}
+
+		$user->access_token = $facebook->getAccessToken();
+
 		$user->save();
 		Auth::login($user);
-		dd($user);
+		dd($me);
 	}
 
 }

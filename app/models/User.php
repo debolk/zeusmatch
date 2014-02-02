@@ -48,4 +48,14 @@ Class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	/**
+	 * Gets the url for the profile picture
+	 *
+	 * @return string
+	 */
+	public function getPictureUrl()
+	{
+		return 'https://graph.facebook.com/' . $this->uid . '/picture';
+	}
+
 }

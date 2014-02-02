@@ -11,10 +11,10 @@
     font-weight: bold;
 }
 
-.negative {
+.ui-input-btn input.negative {
     background-color: #ed1c24;
 }
 
-.positive {
+.ui-input-btn input.positive {
     background-color: #8cc63f;
 }

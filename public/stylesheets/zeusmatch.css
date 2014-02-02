@@ -10,3 +10,11 @@
 .details .name {
     font-weight: bold;
 }
+
+.negative {
+    background-color: #ed1c24;
+}
+
+.positive {
+    background-color: #8cc63f;
+}

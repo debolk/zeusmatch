@@ -18,20 +18,14 @@
                 <h1>ZeusMatch</h1>
             </div>
             <div role="main" class="ui-content">
-                <h1>Contact</h1>
-                <p>
-                    Vragen? <a href="mailto:zeusmatch@debolk.nl">zeusmatch@debolk.nl</a>
-                </p>
-                <p>
-                    ZeusMatch is een product van <a href="https://www.facebook.com/max.maton">Max Maton</a> en <a href="https://www.facebook.com/jakobbuis">Jakob Buis</a>.
-                </p>
+                <?php echo $content; ?>
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" data-icon="gear">Instellingen</a></li>
-                        <li><a href="#" data-icon="power">Privacy</a></li>
-                        <li><a href="#" data-icon="mail" class="ui-btn-active">Contact</a></li>
+                        <li><a href="#" data-icon="gear" <?php echo Request::is('settings') ? 'class="ui-btn-active"': null; ?>>Instellingen</a></li>
+                        <li><a href="#" data-icon="power" <?php echo Request::is('privacy') ? 'class="ui-btn-active"': null; ?>>Privacy</a></li>
+                        <li><a href="#" data-icon="mail" <?php echo Request::is('contact') ? 'class="ui-btn-active"': null; ?>>Contact</a></li>
                     </ul>
                 </div>
             </div>

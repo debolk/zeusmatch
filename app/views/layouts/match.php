@@ -15,13 +15,10 @@
         <div data-role="page">
             <div data-role="header">
                 <h1>ZeusMatch</h1>
+                <a href="#" class="ui-btn-right" data-icon="gear">Opties</a>
             </div>
             <div role="main" class="ui-content">
-                <img src="images/logo.png" alt="Logo van ZeusMatch" class="logo">
-                <p>Welkom bij ZeusMatch, jouw plek om nieuwe (leuke) zusjes te ontmoeten!</p>
-                <p>
-                    <input value="Login met Facebook" type="button" data-theme="c">
-                </p>
+                <?php echo $content; ?>
             </div>
         </div>
 

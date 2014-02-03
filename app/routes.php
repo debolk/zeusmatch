@@ -14,4 +14,4 @@ Route::get('/chat', 'ChatController@index');
 Route::get('/settings', 'SettingsController@index');
 Route::get('/privacy', 'PrivacyController@index');
 Route::get('/contact', 'ContactController@index');
-
+Route::post('/contact/send', 'ContactController@send_contactform');

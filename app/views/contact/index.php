@@ -15,7 +15,7 @@
     </p>
     <p>
         <label for="message_type">Onderwerp</label>
-        <select name="message" id="message_type" data-native-menu="false">
+        <select name="message_type" id="message_type" data-native-menu="false">
             <option value="">Selecteer onderwerp</option>
             <option value="featurerequest">Idee voor een nieuwe feature</option>
             <option value="bugreport">Bug, foutmelding, etc</option>

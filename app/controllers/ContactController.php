@@ -15,11 +15,15 @@ class ContactController extends OptionsController
      */
     public function send_contactform()
     {
-        //FIXME Implement method
-
-        // Gather post-data
-        // Scrub data
-        // Compose email (use a mailer class!)
+        // Send data off as e-mail
+        MailerContactForm::send(
+            e(Input::get('name')), 
+            e(Input::get('contact_method')),
+            e(Input::get('message_type')),
+            e(Input::get('message'))
+        );
+        
         // Return a popup that says "thnx, message sent"
+        return View::make('contact/_thanks');
     }
 }

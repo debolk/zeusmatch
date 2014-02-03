@@ -2,25 +2,25 @@
 <form>
     <div>
         <label for="birthdate">Geboortedatum</label>
-        <input name="birthdate" id="birthdate" value="<?= $user['birthday'] ?>" type="text" placeholder="DD-MM-YYYY">
+        <input name="birthdate" id="birthdate" value="<?php echo $user['birthday'] ?>" type="text" placeholder="DD-MM-YYYY">
     </div>
     <div>
         <label for="telephone">Telefoonnummer</label>
-        <input name="telephone" id="telephone" value="<?= $user['phonenumber'] ?>" type="text" placeholder="+31612345678">
+        <input name="telephone" id="telephone" value="<?php echo $user['phonenumber'] ?>" type="text" placeholder="+31612345678">
     </div>
     <div>
         <label for="gender">Geslacht</label>
         <select name="gender" id="gender" data-role="slider">
-            <option value="m" <?= ($user['gender'] == 'M'?'selected':'') ?>>Man</option>
-            <option value="f" <?= ($user['gender'] == 'F'?'selected':'') ?>>Vrouw</option>
+            <option value="m" <?php echo ($user['gender'] == 'M'?'selected':'') ?>>Man</option>
+            <option value="f" <?php echo ($user['gender'] == 'F'?'selected':'') ?>>Vrouw</option>
         </select>
     </div>
     <div>
         <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
             <legend>Ge&iuml;nteresseerd in</legend>
-            <input name="gender_wanted_female" id="gender_wanted_female" type="checkbox" <?= ($user['gender_wanted_female']?'checked':'') ?>>
+            <input name="gender_wanted_female" id="gender_wanted_female" type="checkbox" <?php echo ($user['gender_wanted_female']?'checked':'') ?>>
             <label for="gender_wanted_female">vrouwen</label>
-            <input name="gender_wanted_male" id="gender_wanted_male" type="checkbox" <?= ($user['gender_wanted_male']?'checked':'') ?>>
+            <input name="gender_wanted_male" id="gender_wanted_male" type="checkbox" <?php echo ($user['gender_wanted_male']?'checked':'') ?>>
             <label for="gender_wanted_male">mannen</label>
         </fieldset>
     </div>
@@ -28,22 +28,17 @@
         <label for="organisation" class="select">Lid van vereniging</label>
         <select name="organisation" id="organisation" data-native-menu="false">
         <?php foreach($organisations as $id => $org): ?>
-            <option value="<?= $id ?>" <?php echo ($user['organisation'] == $id?'selected':'') ?>><?php echo $org['html'] ?></option>
+            <option value="<?php echo $id ?>" <?php echo ($user['organisation'] == $id?'selected':'') ?>><?php echo $org['html'] ?></option>
         <?php endforeach; ?>
         </select>
     </div>
     <div>
         <fieldset data-role="controlgroup">
             <legend>Match me met leden van deze verenigingen</legend>
-<?php
-foreach($organisations as $id => $org)
-{
-?>
-            <input name="orgwanted_<?= $id ?>" id="orgwanted_<?= $id ?>" <?= (in_array($id, $wanted)?'checked':'') ?> type="checkbox">
-            <label for="orgwanted_<?= $id ?>"><?= $org['html'] ?></label>
-<?php
-}
-?>
+            <?php foreach($organisations as $id => $org): ?>
+                <input name="orgwanted_<?php echo $id ?>" id="orgwanted_<?php echo $id ?>" <?php echo (in_array($id, $wanted)?'checked':'') ?> type="checkbox">
+                <label for="orgwanted_<?php echo $id ?>"><?php echo $org['html'] ?></label>
+            <?php endforeach; ?>
         </fieldset>
     </div>
 </form>

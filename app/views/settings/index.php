@@ -27,14 +27,9 @@
     <div>
         <label for="organisation" class="select">Lid van vereniging</label>
         <select name="organisation" id="organisation" data-native-menu="false">
-<?php
-foreach($organisations as $id => $org)
-{
-?>
-            <option value="<?= $id ?>" <?= ($user['organisation'] == $id?'selected':'') ?>><?= $org['html'] ?></option>
-<?php
-}
-?>
+        <?php foreach($organisations as $id => $org): ?>
+            <option value="<?= $id ?>" <?php echo ($user['organisation'] == $id?'selected':'') ?>><?php echo $org['html'] ?></option>
+        <?php endforeach; ?>
         </select>
     </div>
     <div>

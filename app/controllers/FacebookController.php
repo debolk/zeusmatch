@@ -72,7 +72,18 @@ class FacebookController extends BaseController {
 				'Leiden' => 'Catena',
 				'Leeuwarden' => 'Wolweze',
 			);
-			$user->organisation = $translation[$town];
+            $user->organisation = $translation[$town];
+
+            $user->organisationsWanted()->delete();
+            foreach($translation as $location => $org)
+            {
+                if($user->organisation == $org)
+                    continue;
+
+                $pref = new OrganisationWanted();
+                $pref->organisation = $org;
+                $user->organisationsWanted()->save($pref);
+            }
 		}
 
 		$user->access_token = $facebook->getAccessToken();

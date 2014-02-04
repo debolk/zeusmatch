@@ -11,9 +11,8 @@ class SettingsController extends OptionsController
             return Redirect::action('SplashController@index');
         $user = Auth::user();
         $organisations = Config::get('organisations');
-        $wanted = $user->organisationsWanted()->get();
-        $wanted = array_map(function($value){ return $value[0]->organisation; }, (array)$wanted);
-        $wanted = array_values($wanted);
+        $wanted = $user->organisationsWanted()->get()->toArray();
+        $wanted = array_map(function($value){ return $value["organisation"]; }, $wanted);
 
         $this->layout->content = View::make('settings/index', array('user' => $user, 'organisations' => $organisations, 'wanted' => $wanted));
     }

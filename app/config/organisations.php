@@ -9,5 +9,5 @@ return array(
 	'Cleopatra' => ['html' => 'Cleopatra'],
 	'Karpe' => ['html' => 'Karpe Noktem'],
 	'Liber' => ['html' => 'Liber'],
-	'Wolweze' => ['html' => 'Wolw&eric;ze'],
+	'Wolweze' => ['html' => 'Wolwêze'],
 );

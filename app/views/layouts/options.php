@@ -1,4 +1,4 @@
-<?php echo View::make('layouts/_header', ['page_id' => $page_id]); ?>
+<?php echo $header; ?>
     <a href="/match" data-icon="carat-l">Terug</a>
 </div>
 <div role="main" class="ui-content">
@@ -15,4 +15,4 @@
         </ul>
     </div>
 </div>
-<?php echo View::make('layouts/_footer'); ?>
+<?php echo $footer; ?>

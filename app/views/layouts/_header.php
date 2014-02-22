@@ -14,4 +14,4 @@
 
         <div data-role="page" id="page-<?php echo $page_id; ?>">
             <div data-role="header">
-                <h1>ZeusMatch</h1>
+                <h1><?php echo $page_title; ?></h1>

@@ -6,7 +6,12 @@ class ChatController extends BaseController
     {
         parent::__construct();
 
+        View::share('page_id', 'chat');
+        View::share('page_title', 'Chat');
+
         $this->layout = View::make('layouts/chat');
+        $this->layout->nest('header', 'layouts/_header');
+        $this->layout->nest('footer', 'layouts/_footer');
     }
 
     /**
@@ -14,7 +19,6 @@ class ChatController extends BaseController
      */
     public function index()
     {
-        $this->layout->with('page_id', 'chat');
         $this->layout->content = View::make('chat/index');
     }
 }

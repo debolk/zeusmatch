@@ -1,4 +1,3 @@
-<h1>Privacy</h1>
 <p>
     Dit is de privacyverklaring van de ZeusMatch. Deze privacyverklaring heeft betrekking op de gegevensverwerking door ZeusMatch door middel van het datingsysteem en de verwerkingen via de website zeusmatch.debolk.nl alsmede met betrekking tot het gebruik van cookies.
 </p>

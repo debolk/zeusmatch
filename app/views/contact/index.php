@@ -1,4 +1,3 @@
-<h1>Contact</h1>
 <p>
     Heb je een vraag, opmerking, feature request of bug report? Je kunt ons mailen op <a href="mailto:zeusmatch@debolk.nl">zeusmatch@debolk.nl</a> of gebruik het onderstaande formulier.
 </p>

@@ -2,12 +2,23 @@
 
 class ContactController extends OptionsController
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        View::share('page_id', 'contact');
+        View::share('page_title', 'Contact');
+
+        $this->layout = View::make('layouts/options');
+        $this->layout->nest('header', 'layouts/_header');
+        $this->layout->nest('footer', 'layouts/_footer');
+    }
+
     /**
      * Shows the contact page
      */
     public function index()
     {   
-        $this->layout->with('page_id', 'contact');
         $this->layout->content = View::make('contact/index');
     }
 

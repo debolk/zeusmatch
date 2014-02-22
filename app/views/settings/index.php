@@ -1,4 +1,3 @@
-<h1>Instellingen</h1>
 <form class="autosubmit" method="POST" action="/settings">
     <div>
         <label for="birthdate">Geboortedatum</label>

@@ -1,12 +1,12 @@
 <h1>Instellingen</h1>
-<form>
+<form class="autosubmit" method="POST" action="/settings">
     <div>
         <label for="birthdate">Geboortedatum</label>
-        <input name="birthdate" id="birthdate" value="<?php echo $user['birthday'] ?>" type="text" placeholder="DD-MM-YYYY">
+        <input name="birthdate" id="birthdate" value="<?php echo $user['birthday'] ?>" type="date" placeholder="DD-MM-YYYY" pattern="(20\d{2}|19\d{2})-(0\d|1[012])-\d{2}">
     </div>
     <div>
         <label for="telephone">Telefoonnummer</label>
-        <input name="telephone" id="telephone" value="<?php echo $user['phonenumber'] ?>" type="text" placeholder="+31612345678">
+        <input name="telephone" id="telephone" value="<?php echo $user['phonenumber'] ?>" type="tel" placeholder="0612345678" pattern="06\d{8}">
     </div>
     <div>
         <label for="gender">Geslacht</label>

@@ -13,7 +13,7 @@ Route::get('/chat', 'ChatController@index');
 // Options UI
 Route::get('/settings', 'SettingsController@index');
 Route::post('/settings', 'SettingsController@save');
-Route::delete('/settings', 'SettingsController@delete');
+Route::post('/delete', 'SettingsController@delete');
 
 Route::get('/privacy', 'PrivacyController@index');
 Route::get('/contact', 'ContactController@index');

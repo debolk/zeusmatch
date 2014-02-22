@@ -67,7 +67,11 @@ class SettingsController extends OptionsController
     {
         if(!Auth::check())
             return Redirect::action('SplashController@index');
+        $user = Auth::user();
+        Auth::logout();
+        $user->delete();
 
+        return Redirect::action('SplashController@index');
     }
 }
 

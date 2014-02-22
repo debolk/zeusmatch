@@ -6,7 +6,7 @@
     </div>
     <div>
         <label for="telephone">Telefoonnummer</label>
-        <input name="telephone" id="telephone" value="<?php echo $user['phonenumber'] ?>" type="tel" placeholder="0612345678" pattern="06\d{8}">
+        <input name="telephone" id="telephone" value="<?php echo $user['telephone'] ?>" type="tel" placeholder="0612345678" pattern="06\d{8}">
     </div>
     <div>
         <label for="gender">Geslacht</label>
@@ -54,5 +54,7 @@
     Weet je zeker dat je je profiel wilt verwijderen? Alle data (je foto's, likes, matches) wordt onmiddelijk verwijderd en kan niet meer worden teruggehaald. Je kan deze stap niet ongedaan maken.
 </p>
 <p>
-    <input data-icon="delete" value="Ja, verwijder mijn profiel" type="button" data-theme="b">
+<form id="delete-settings" action="/delete" method="POST" data-ajax="false">
+    <input data-icon="delete" value="Ja, verwijder mijn profiel" type="submit" data-theme="b">
+</form>
 </p>

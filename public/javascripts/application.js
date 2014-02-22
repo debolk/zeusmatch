@@ -12,3 +12,14 @@ $(document).on("pageinit", function(){
         });
     });
 });
+
+$(document).on("pageinit", "#page-settings", function(){
+    $("#delete-settings").on("submit", function(){
+
+        $("#delete-settings").off("submit");
+        $("#delete-settings input:first").attr("value", "Weet je dit zeker?");
+        $("#delete-settings input:first").button("refresh");
+
+        return false;
+    });
+});

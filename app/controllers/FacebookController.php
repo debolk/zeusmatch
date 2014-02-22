@@ -60,6 +60,9 @@ class FacebookController extends BaseController {
 		// Update user
 		$user->name = $me['first_name'] . ' ' . $me['last_name'];
 
+        // Delay saving OrganisationsWanted until user has been saved
+        $orgs = [];
+
 		if($user->organisation == null)
 		{
 			$town = $me['location']['name'];
@@ -82,13 +85,18 @@ class FacebookController extends BaseController {
 
                 $pref = new OrganisationWanted();
                 $pref->organisation = $org;
-                $user->organisationsWanted()->save($pref);
+                $orgs[] = $pref;
             }
-		}
+        }
+
 
 		$user->access_token = $facebook->getAccessToken();
 
-		$user->save();
+        $user->save();
+        
+        foreach($orgs as $pref)
+            $user->organisationsWanted()->save($pref);
+
 		Auth::login($user);
         
         return Redirect::to('/')->with('message', 'Logged in with Facebook');

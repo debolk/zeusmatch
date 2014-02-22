@@ -7,6 +7,7 @@ class ContactController extends OptionsController
      */
     public function index()
     {   
+        $this->layout->with('page_id', 'contact');
         $this->layout->content = View::make('contact/index');
     }
 

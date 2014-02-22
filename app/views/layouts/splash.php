@@ -1,4 +1,4 @@
-<?php echo View::make('layouts/_header'); ?>
+<?php echo View::make('layouts/_header', ['page_id' => $page_id]); ?>
             </div>
             <div role="main" class="ui-content">
                 <?php echo $content; ?>

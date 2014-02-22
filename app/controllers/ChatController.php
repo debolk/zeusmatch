@@ -14,6 +14,7 @@ class ChatController extends BaseController
      */
     public function index()
     {
+        $this->layout->with('page_id', 'chat');
         $this->layout->content = View::make('chat/index');
     }
 }

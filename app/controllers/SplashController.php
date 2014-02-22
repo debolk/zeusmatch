@@ -12,6 +12,7 @@ class SplashController extends BaseController
      */
     public function index()
     {
+        $this->layout->with('page_id', 'splash');
 	if (Auth::check()) {
 		return Redirect::action('MatchController@index');
 	}

@@ -7,6 +7,8 @@ class MatchController extends BaseController
      */
     public function index()
     {
+        $this->layout->with('page_id', 'match');
+
         if(!Auth::check())
             return Redirect::action('SplashController@index');
 

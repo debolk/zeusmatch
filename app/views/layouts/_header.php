@@ -12,6 +12,6 @@
     </head>
     <body>
 
-        <div data-role="page">
+        <div data-role="page" id="<?php echo $page_id; ?>">
             <div data-role="header">
                 <h1>ZeusMatch</h1>

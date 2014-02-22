@@ -7,6 +7,8 @@ class SettingsController extends OptionsController
      */
     public function index()
     {
+        $this->layout->with('page_id', 'settings');
+
         if(!Auth::check())
             return Redirect::action('SplashController@index');
         $user = Auth::user();

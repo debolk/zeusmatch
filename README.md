@@ -3,7 +3,7 @@ ZeusMatch
 ZeusMatch is a small, single page, mobile application that creates eternal love between members of the Z.E.U.S. The concept is based off Tinder, but for a local, known set of people.
 
 ## Technology
-ZeusMatch is a client-side Javascript application built using jQuery Mobile. The server-side components are based on Laravel. 
+ZeusMatch is a client-side Javascript application built using [jQuery Mobile](http://jquerymobile.com/). The server-side components are based on [Laravel](http://jquerymobile.com/). 
 
 ## Deployment
 1. Install nginx, php and mysql. An example nginx-configuration is available in `.nginx-config.example`.

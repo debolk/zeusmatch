@@ -19,7 +19,11 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	//
+    // If we have a current user, update his access time
+    if (Auth::check()) {
+        Auth::user()->lastonline = date('c');
+        Auth::user()->save();
+    }
 });
 
 /*
